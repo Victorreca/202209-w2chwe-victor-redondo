@@ -39,11 +39,56 @@ describe("Given the number of rows and columns", () => {
         [1, 1, 0],
         [0, 0, 0],
       ];
-
       const currentGrid = gridElementsWitchState(previousGrid);
 
       const expectedState = 0;
+      const currentCellValue = currentGrid[1][1];
 
+      expect(currentCellValue).toStrictEqual(expectedState);
+    });
+  });
+
+  describe("When a cell has state death and has 3 alive cells around", () => {
+    test("Then it should change his state to alive", () => {
+      const previousGrid = [
+        [0, 1, 1],
+        [0, 0, 1],
+        [0, 0, 0],
+      ];
+      const currentGrid = gridElementsWitchState(previousGrid);
+
+      const expectedState = 1;
+      const currentCellValue = currentGrid[1][1];
+
+      expect(currentCellValue).toStrictEqual(expectedState);
+    });
+  });
+
+  describe("When a cell has state death and has less than 3 alive cells around", () => {
+    test("Then it should return the same state", () => {
+      const previousGrid = [
+        [0, 1, 1],
+        [0, 0, 0],
+        [0, 0, 0],
+      ];
+      const currentGrid = gridElementsWitchState(previousGrid);
+
+      const expectedState = 0;
+      const currentCellValue = currentGrid[1][1];
+
+      expect(currentCellValue).toStrictEqual(expectedState);
+    });
+  });
+  describe("When a cell has state death and has more than 3 alive cells around", () => {
+    test("Then it should return the same state", () => {
+      const previousGrid = [
+        [1, 1, 1],
+        [1, 0, 0],
+        [0, 0, 0],
+      ];
+      const currentGrid = gridElementsWitchState(previousGrid);
+
+      const expectedState = 0;
       const currentCellValue = currentGrid[1][1];
 
       expect(currentCellValue).toStrictEqual(expectedState);
