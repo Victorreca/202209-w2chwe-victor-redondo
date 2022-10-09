@@ -31,4 +31,22 @@ describe("Given the number of rows and columns", () => {
       expect(currentCellValue).toStrictEqual(expectedState);
     });
   });
+
+  describe("When a cell has state alive and has more than 3 alive cells around", () => {
+    test("Then it should change his state to death", () => {
+      const previousGrid = [
+        [1, 1, 1],
+        [1, 1, 0],
+        [0, 0, 0],
+      ];
+
+      const currentGrid = gridElementsWitchState(previousGrid);
+
+      const expectedState = 0;
+
+      const currentCellValue = currentGrid[1][1];
+
+      expect(currentCellValue).toStrictEqual(expectedState);
+    });
+  });
 });
