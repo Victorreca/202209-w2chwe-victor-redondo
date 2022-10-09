@@ -11,7 +11,6 @@ export const getGridElements = (rows, columns) => {
 };
 
 const checkUpperLeftCell = (grid, rowIndex, columnIndex) => {
-  // checking uperleftposition off cells
   if (rowIndex === 0) return false;
   if (columnIndex === 0) return false;
 
@@ -136,7 +135,8 @@ export const gridElementsWitchState = (grid) => {
     })
   );
 
-  console.log({ grid, nextGrid });
+  console.log(grid);
+  console.log(nextGrid);
 
   return nextGrid;
 };

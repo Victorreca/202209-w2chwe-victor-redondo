@@ -1,5 +1,5 @@
 import { numberOfColumns, numberOfRows } from "./js/config.js";
-import { getGridElements } from "./js/utils.js";
+import { getGridElements, gridElementsWitchState } from "./js/utils.js";
 
 describe("Given the number of rows and columns", () => {
   describe("When number of columns are 3 and number of rows are 3", () => {
@@ -16,14 +16,19 @@ describe("Given the number of rows and columns", () => {
     });
   });
 
-  // describe("When a cell hast state alive and has less than 2 alive cells around", () => {
-  // test("Then it should change its state to death", () => {
-  //   const previousGrid = [
-  //     [0, 0, 0],
-  //     [0, 0, 0],
-  //     [0, 0, 0],
-  //   ];
-  //   const currentGrid = getGridElementsWithCurrentState(previousGrid);
-  //   });
-  // });
+  describe("When a cell hast state alive and has less than 2 alive cells around", () => {
+    test("Then it should change its state to death", () => {
+      const previousGrid = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+      ];
+      const currentGrid = gridElementsWitchState(previousGrid);
+
+      const expectedState = 0;
+      const currentCellValue = currentGrid[1][1];
+
+      expect(currentCellValue).toStrictEqual(expectedState);
+    });
+  });
 });
