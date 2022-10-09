@@ -4,10 +4,8 @@ export const getGridElements = (rows, columns) => {
   const initialColumns = new Array(columns);
   const initialRows = new Array(rows);
 
-  const intialColumnsWihtDefaultState = initialColumns.fill(defaultState);
-  const intialRowsWithDeafultState = initialRows.fill(
-    intialColumnsWihtDefaultState
-  );
+  const intialColumnsWihtState = initialColumns.fill(defaultState);
+  const intialRowsWithState = initialRows.fill(intialColumnsWihtState);
 
-  return intialRowsWithDeafultState;
+  return intialRowsWithState;
 };
