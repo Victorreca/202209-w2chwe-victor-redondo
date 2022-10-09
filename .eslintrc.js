@@ -10,5 +10,14 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    "lines-between-class-members": [
+      "error",
+      "always",
+      { exceptAfterSingleLine: true },
+    ],
+    "import/extensions": ["error", "always"],
+    "import/prefer-default-export": "off",
+    "no-plusplus": "off",
+  },
 };
