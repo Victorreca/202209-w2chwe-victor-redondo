@@ -15,4 +15,15 @@ describe("Given the number of rows and columns", () => {
       expect(result).toStrictEqual(expectedGrid);
     });
   });
+
+  // describe("When a cell hast state alive and has less than 2 alive cells around", () => {
+  // test("Then it should change its state to death", () => {
+  //   const previousGrid = [
+  //     [0, 0, 0],
+  //     [0, 0, 0],
+  //     [0, 0, 0],
+  //   ];
+  //   const currentGrid = getGridElementsWithCurrentState(previousGrid);
+  //   });
+  // });
 });
