@@ -1,24 +1,13 @@
-// const getGridElements = (rows, columns) => {
-//   const rowItems = new Array(rows);
-//   const columnsItems = new Array(columns);
+import { defaultState } from "./config.js";
 
-//   const result = [];
-//   for (let i = 0; i < rowItems; i++) {
-//     result[i] = [0, 0, 0];
+export const getGridElements = (rows, columns) => {
+  const initialColumns = new Array(columns);
+  const initialRows = new Array(rows);
 
-//   }
-// };
+  const intialColumnsWihtDefaultState = initialColumns.fill(defaultState);
+  const intialRowsWithDeafultState = initialRows.fill(
+    intialColumnsWihtDefaultState
+  );
 
-export const getGridElements = (rows) => {
-  const arrayRowAndColumns = [];
-  for (let i = 0; i < rows; i++) {
-    arrayRowAndColumns[i] = [0, 0, 0];
-  }
-  return arrayRowAndColumns;
+  return intialRowsWithDeafultState;
 };
-
-// const rowItems = new Array(rows);
-// console.log({ rows });
-// const result = rowItems.map(() => "");
-// console.log({ result });
-// return result;

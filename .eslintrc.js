@@ -17,6 +17,7 @@ module.exports = {
       { exceptAfterSingleLine: true },
     ],
     "import/extensions": ["error", "always"],
+    "import/prefer-default-export": "off",
     "no-plusplus": "off",
   },
 };

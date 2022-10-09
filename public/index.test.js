@@ -3,15 +3,16 @@ import { getGridElements } from "./js/utils.js";
 
 describe("Given the number of rows and columns", () => {
   describe("When number of columns are 3 and number of rows are 3", () => {
-    test("Then it should retun an array of 3 elements with 3 elements inside", () => {
+    test("Then it should return an array of 3 elements with 3 elements inside wiht teh death state value", () => {
       const result = getGridElements(numberOfRows, numberOfColumns);
-      console.log(result);
-      const expectedArray = [
+
+      const expectedGrid = [
         [0, 0, 0],
         [0, 0, 0],
         [0, 0, 0],
       ];
-      expect(result).toStrictEqual(expectedArray);
+
+      expect(result).toStrictEqual(expectedGrid);
     });
   });
 });

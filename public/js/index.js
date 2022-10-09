@@ -1,6 +1,6 @@
-import { getGridElements } from "./utils.js";
-import { numberOfColumns, numberOfRows } from "./config.js";
-
-const result = getGridElements(numberOfRows, numberOfColumns);
-
-console.log({ result });
+const previousGrid = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
+];
+console.log(previousGrid);
