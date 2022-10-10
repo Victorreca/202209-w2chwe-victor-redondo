@@ -1,5 +1,5 @@
-import { numberOfColumns, numberOfRows } from "./js/config.js";
-import { getGridElements, gridElementsWitchState } from "./js/utils.js";
+import { numberOfColumns, numberOfRows } from "./config.js";
+import { getGridElements, gridElementsWitchState } from "./utils.js";
 
 describe("Given the number of rows and columns", () => {
   describe("When number of columns are 3 and number of rows are 3", () => {
